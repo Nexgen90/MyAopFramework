@@ -2,14 +2,17 @@ package com.example.framework;
 
 public class Desinfector {
 
+    private Announcer announcer = new ConsoleAnnouncer();
+    private Policeman policeman = new PolicemanImpl();
+
     public void start(Room room) {
-        //todo: сообщить всем присутствующим в комнате о начале дезинфекции, попросить покинуть комнату
-        //todo: разогнать всех, кто не вышел после объявления
+        announcer.announce("Дезинфектор: Помещение необходимо продезенфицировать");
+        policeman.makePeopleLeaveRoom();
         desinfect(room);
-        //todo: сообщить всем присутствовавшим в комнате, что они могут вернуться обратно
+        announcer.announce("Дезинфектор: Дезинфекция завершена. Можно возвращаться");
     }
 
     private void desinfect(Room room) {
-        System.out.println("Начата дезинфекция!");
+        System.out.println("Дезинфектор: Начата дезинфекция!");
     }
 }

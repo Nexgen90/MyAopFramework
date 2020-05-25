@@ -2,11 +2,15 @@ package com.example.framework;
 
 import lombok.SneakyThrows;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class ObjectFactory {
     private static ObjectFactory ourInstance = new ObjectFactory();
-    private Config config = new JavaConfig("com.example");
+    private Config config;
 
     private ObjectFactory() {
+        config = new JavaConfig("com.example", new HashMap<>(Map.of(Policeman.class, AngryPolicemanImpl.class)));
     }
 
     public static ObjectFactory getInstance() {
@@ -20,6 +24,8 @@ public class ObjectFactory {
             implClass = config.getImplClass(type);
         }
 
-        return implClass.getDeclaredConstructor().newInstance();
+        T t = implClass.getDeclaredConstructor().newInstance();
+        
+        return t;
     }
 }

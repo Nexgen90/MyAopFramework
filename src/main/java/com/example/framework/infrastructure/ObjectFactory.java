@@ -1,5 +1,8 @@
-package com.example.framework;
+package com.example.framework.infrastructure;
 
+import com.example.framework.business.AngryPolicemanImpl;
+import com.example.framework.business.Policeman;
+import com.example.framework.infrastructure.configurators.ObjectConfigurator;
 import lombok.SneakyThrows;
 
 import java.util.ArrayList;

@@ -1,4 +1,6 @@
-package com.example.framework;
+package com.example.framework.business;
+
+import com.example.framework.infrastructure.configurators.property.InjectProperty;
 
 public class RecommendatorImpl implements Recommendator {
     @InjectProperty("vine")

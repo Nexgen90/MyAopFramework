@@ -1,5 +1,6 @@
-package com.example.framework;
+package com.example.framework.infrastructure.configurators.property;
 
+import com.example.framework.infrastructure.configurators.ObjectConfigurator;
 import lombok.SneakyThrows;
 
 import java.io.BufferedReader;

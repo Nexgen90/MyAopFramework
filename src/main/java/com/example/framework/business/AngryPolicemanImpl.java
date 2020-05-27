@@ -1,4 +1,4 @@
-package com.example.framework;
+package com.example.framework.business;
 
 public class AngryPolicemanImpl implements Policeman {
     @Override

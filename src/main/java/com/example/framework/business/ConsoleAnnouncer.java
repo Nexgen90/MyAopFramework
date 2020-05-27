@@ -1,4 +1,8 @@
-package com.example.framework;
+package com.example.framework.business;
+
+import com.example.framework.business.Announcer;
+import com.example.framework.business.Recommendator;
+import com.example.framework.infrastructure.ObjectFactory;
 
 public class ConsoleAnnouncer implements Announcer {
     private Recommendator recommendator = ObjectFactory.getInstance().createObject(Recommendator.class);

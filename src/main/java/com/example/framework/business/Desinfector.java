@@ -1,4 +1,6 @@
-package com.example.framework;
+package com.example.framework.business;
+
+import com.example.framework.infrastructure.ObjectFactory;
 
 public class Desinfector {
 

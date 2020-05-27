@@ -1,4 +1,4 @@
-package com.example.framework;
+package com.example.framework.infrastructure;
 
 import lombok.Getter;
 import org.reflections.Reflections;

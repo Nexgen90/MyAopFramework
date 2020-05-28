@@ -1,11 +1,12 @@
 package com.example.framework.business;
 
-import com.example.framework.infrastructure.ObjectFactory;
+import com.example.framework.infrastructure.configurators.singletone.InjectByType;
 
 public class Desinfector {
-
-    private Announcer announcer = ObjectFactory.getInstance().createObject(Announcer.class);
-    private Policeman policeman = ObjectFactory.getInstance().createObject(Policeman.class);
+    @InjectByType
+    private Announcer announcer;
+    @InjectByType
+    private Policeman policeman;
 
     public void start(Room room) {
         announcer.announce("Дезинфектор: Помещение необходимо продезенфицировать");

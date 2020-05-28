@@ -1,11 +1,10 @@
 package com.example.framework.business;
 
-import com.example.framework.business.Announcer;
-import com.example.framework.business.Recommendator;
-import com.example.framework.infrastructure.ObjectFactory;
+import com.example.framework.infrastructure.configurators.singletone.InjectByType;
 
 public class ConsoleAnnouncer implements Announcer {
-    private Recommendator recommendator = ObjectFactory.getInstance().createObject(Recommendator.class);
+    @InjectByType
+    private Recommendator recommendator;
 
     @Override
     public void announce(String message) {

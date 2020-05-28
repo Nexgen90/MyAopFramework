@@ -1,5 +1,6 @@
 package com.example.framework.infrastructure.configurators.property;
 
+import com.example.framework.infrastructure.ApplicationContext;
 import com.example.framework.infrastructure.configurators.ObjectConfigurator;
 import lombok.SneakyThrows;
 
@@ -23,7 +24,7 @@ public class InjectPropertyAnnotationObjectConfigurator implements ObjectConfigu
 
     @Override
     @SneakyThrows
-    public void configure(Object t) {
+    public void configure(Object t, ApplicationContext context) {
         Class<?> implClass = t.getClass();
         //по хорошему надо смотреть все филды, в том числе и родителей...
         for (Field field : implClass.getDeclaredFields()) {

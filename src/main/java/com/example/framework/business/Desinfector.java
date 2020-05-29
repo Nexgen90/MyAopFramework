@@ -2,6 +2,7 @@ package com.example.framework.business;
 
 import com.example.framework.infrastructure.configurators.singletone.InjectByType;
 
+@Deprecated
 public class Desinfector {
     @InjectByType
     private Announcer announcer;
